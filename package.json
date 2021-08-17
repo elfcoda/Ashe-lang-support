@@ -1,0 +1,25 @@
+{
+    "name": "ashe-language-support",
+    "displayName": "Ashe-Language-Support",
+    "description": "New Language Support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jhin",
+            "aliases": ["Jhin", "jhin"],
+            "extensions": [".jhin",".jin",".jn"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jhin",
+            "scopeName": "source.jhin",
+            "path": "./syntaxes/jhin.tmLanguage.json"
+        }]
+    }
+}
