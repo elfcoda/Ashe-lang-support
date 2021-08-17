@@ -1,0 +1,126 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Jhin",
+	"patterns":
+	[
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#parens"
+		},
+		{
+			"include": "#invalids"
+		}
+	],
+	"repository":
+	{
+		"comments":
+		{
+			"patterns":
+			[{
+				"name": "comment.block.documentation.jhin",
+				"begin": "---",
+				"end": "$"
+			},
+			{
+				"name": "comment.line.double-dash.jhin",
+				"begin": "--",
+				"end": "$"
+			}]
+		},
+		"keywords":
+		{
+			"patterns":
+			[{
+				"name": "keyword.control.jhin",
+				"match": "\\b(if|else|while|for|return)\\b"
+			},
+			{
+				"name": "support.type.jhin",
+				"match": "\\b(Int|Float|Double|String|Unit)\\b"
+			},
+			{
+				"name": "entity.jhin",
+				"match": "\\b(import)\\b"
+			},
+			{
+				"name": "support.type.jhin",
+				"match": "\\b(class)\\b"
+			},
+			{
+				"name": "entity.name.function.jhin",
+				"match": "\\b(def)\\b"
+			},
+			{
+				"name": "constant.numeric.jhin",
+				"match": "\\b(True|False)\\b"
+			},
+			{
+				"name": "keyword.control.jhin",
+				"match": "<-"
+			},
+			{
+				"name": "support.type.jhin",
+				"match": "(==|>=|<=|>|<)"
+			},
+			{
+				"name": "support.type.jhin",
+				"match": "(\\+|\\-|\\*|\\/)"
+			},
+			{
+				"name": "keyword.control.jhin",
+				"match": ":"
+			},
+			{
+				"name": "support.type.jhin",
+				"match": "\\b[a-z][a-zA-Z0-9_]*\\b"
+			},
+			{
+				"name": "keyword.control.jhin",
+				"match": "\\b[A-Z][a-zA-Z_]*\\b"
+			},
+			{
+				"name": "support.type.jhin",
+				"match": "\\b([1-9][0-9]*|0)\\.[0-9]+\\b"
+			},
+			{
+				"name": "keyword.control.jhin",
+				"match": "\\b([1-9][0-9]*|0)\\b"
+			}]
+		},
+		"strings":
+		{
+			"name": "string.quoted.double.jhin",
+			"begin": "\"",
+			"end": "\"",
+			"patterns":
+			[
+				{
+					"name": "constant.character.escape.jhin",
+					"match": "\\\\."
+				}
+			]
+		},
+		"parens":
+		{
+			"name": "entity.name.section.jhin",
+			"match": "(\\(|\\)|\\{|\\})"
+		},
+		"invalids":
+		{
+			"patterns":
+			[{
+				"name": "invalid.jhin",
+				"match": "[=;]"
+			}]
+		}
+	},
+	"scopeName": "source.jhin"
+}
